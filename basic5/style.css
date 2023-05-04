@@ -1,0 +1,29 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+
+
+.container{
+    border: 2px solid #000000;
+    background-color: rgb(255 190 85);
+    padding: 10px;
+    
+}
+.item{
+    border: 2px solid #000000;
+    background-color: rgb(151 255 131);
+}
+
+
+
+/* gap:그리드 셀 사이의 간격을 설정함
+기본값: 0 */
+
+/* grid-auto-columns. grid-auto-rows */
+
+.container{
+    display: grid;
+    grid-auto-columns:repeat(3,1fr);
+   /*  grid-template-rows: repeat(3,minmax(200px, auto)); */
+  grid-auto-rows:minmax(200px,auto);
+}

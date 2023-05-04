@@ -1,0 +1,47 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+
+/* 그리드는 플렉스보다 나중에 나왔음 
+플레ㄱ스는 한 방향 배치 구현 
+그리드는 두 방향 배치 구현 
+두개를 다 안다면 알맞는 곳에 사용 할 수 있음 
+전체구성은 그리드하고 부분구성은  플렉스로 하는 경우가 많음 */
+
+/* 그리드 형태 정의
+grid-template-rows
+grid-template-columns
+-ms-grid-rows
+-ms-grid-columns */
+
+
+.container{
+    border: 2px solid #000000;
+    background-color: rgb(255 190 85);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100px 300px 200px;
+    grid-template-columns: 300px 1fr 300;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr); /* 1fr을 5번 반복 */
+    grid-template-columns: repeat(3,1fr 2fr 1fr);
+
+    grid-template-columns: 100px 1fr 200px;
+    grid-template-rows: 200px 200px; /* 설정한 첫번째 두번째 줄은 높이가 200px로 적용되고 나머지는 auto로 적용 된다. */
+
+    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr) 300px 300px;
+
+    height: 80vh;
+    /* fr: fraction(비율) */
+
+
+
+}
+/* 그리드와 플렉스는 자식요소가 인라인 요소일지라도 블락요소로 바꾸어버린다 */
+.item{
+    border: 2px solid #000000;
+    background-color: rgb(151 255 131);
+}

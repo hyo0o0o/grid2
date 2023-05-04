@@ -1,0 +1,36 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+
+/* 그리드는 플렉스보다 나중에 나왔음 
+플레ㄱ스는 한 방향 배치 구현 
+그리드는 두 방향 배치 구현 
+두개를 다 안다면 알맞는 곳에 사용 할 수 있음 
+전체구성은 그리드하고 부분구성은  플렉스로 하는 경우가 많음 */
+
+/* 그리드 형태 정의
+grid-template-rows
+grid-template-columns
+-ms-grid-rows
+-ms-grid-columns */
+
+
+.container{
+    border: 2px solid #000000;
+    background-color: rgb(255 190 85);
+    padding: 10px;
+    display: grid;
+}
+.item{
+    border: 2px solid #000000;
+    background-color: rgb(151 255 131);
+}
+
+/* auto-fill, auto-fit */
+.container{
+   display: grid;
+   grid-template-columns: repeat(3,20%);
+   grid-template-columns: repeat(3,minmax(20%,auto));
+   grid-template-columns: repeat(auto-fill,minmax(20%,auto));
+   grid-template-columns: repeat(auto-fit,minmax(20%,auto));
+}
