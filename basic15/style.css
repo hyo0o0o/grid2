@@ -1,0 +1,35 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+.container{
+    border: 2px solid #000000;
+    background-color: rgb(255 190 85);
+    padding: 10px;
+    display: grid;
+}
+
+.item{
+    border: 2px solid #000000;
+    background-color: rgb(151 255 131);
+    padding: 10px;
+}
+
+
+/* place-content
+    align-content와justify-content를 같이 쓸수 있는 단축속성
+    align-content, justify-content 순서로 작성 만일 하나만 적으면 두 속성 모두에게 적용
+
+*/
+
+.container{
+    display: grid;
+    height: 100vh;
+    place-content:space-between center;
+
+}
+
+.item{
+
+
+
+}

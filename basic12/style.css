@@ -1,0 +1,27 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+.container{
+    border: 2px solid #000000;
+    background-color: rgb(255 190 85);
+    padding: 10px;
+    display: grid;
+}
+
+.item{
+    border: 2px solid #000000;
+    background-color: rgb(151 255 131);
+    padding: 10px;
+}
+
+
+/* place-itmes:ceter start */
+
+.container{
+    display: grid;
+    gap:10px;
+    grid-template-columns:  repeat(3,1fr);
+    height: 120vh;
+    place-itmes:ceter start;
+}
+.item{}

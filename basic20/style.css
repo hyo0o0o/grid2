@@ -1,0 +1,28 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+.container{
+    border: 2px solid #000000;
+    background-color: rgb(255 190 85);
+    padding: 10px;
+    display: grid;
+}
+
+.item{
+    border: 2px solid #000000;
+    background-color: rgb(151 255 131);
+    padding: 10px;
+}
+
+
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.item:nth-child(){transform: scale(2);}
+.item:nth-child(){z-index: 10;}
+/* flex나 grid는 position:없이 z-index가 실행됨 */
